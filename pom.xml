@@ -9,7 +9,7 @@
 	<groupId>com.ecom.order</groupId>
 	<artifactId>ecom-order</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eproduct</name>
+	<name>eorder</name>
 	<description>Order service for e-commerce</description>
 
 	<properties>
