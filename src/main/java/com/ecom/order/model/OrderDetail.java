@@ -16,7 +16,7 @@ import org.hibernate.annotations.Type;
 
 /**
  * @author quanhoang
- * Product Entity as a resource
+ * Order Detail as a resource
  */
 @Entity
 @Table

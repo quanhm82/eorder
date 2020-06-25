@@ -15,7 +15,7 @@ import org.hibernate.annotations.Type;
 
 /**
  * @author quanhoang
- * Product Category as a resource
+ * Order as a resource
  */
 @Entity
 @Table(name = "TBL_ORDER")

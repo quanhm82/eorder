@@ -32,7 +32,7 @@ public class Swagger2Config {
 	
 	private ApiInfo getApiInfo() {
 	    return new ApiInfo(
-	            "Product Service",
+	            "Order Service",
 	            "Simple POC for eCommerce",
 	            "0.0.1",
 	            "....",
