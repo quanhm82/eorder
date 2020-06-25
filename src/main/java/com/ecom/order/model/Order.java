@@ -35,12 +35,6 @@ public class Order {
 	@Column(name = "USER_ID")
 	private String userId;
 	
-	@Column(name = "CUSTOMER_PHONE")
-	private String customerPhone;
-	
-	@Column(name = "SHIPPING_ADDR")
-	private String shippingAddress;
-	
 	@Column(name = "CITY")
 	private String city;
 	
@@ -64,22 +58,6 @@ public class Order {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
-	}
-
-	public String getCustomerPhone() {
-		return customerPhone;
-	}
-
-	public void setCustomerPhone(String customerPhone) {
-		this.customerPhone = customerPhone;
-	}
-
-	public String getShippingAddress() {
-		return shippingAddress;
-	}
-
-	public void setShippingAddress(String shippingAddress) {
-		this.shippingAddress = shippingAddress;
 	}
 
 	public String getCity() {
