@@ -14,6 +14,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 /**
  * @author quanhoang
@@ -33,6 +34,7 @@ public class Shipment {
 	
 	@OneToOne
 	@JoinColumn(name = "orderId")
+	@RestResource(path = "order", rel = "order")
 	private Order order;
 	
 	@Column(name = "ADDRESS")
