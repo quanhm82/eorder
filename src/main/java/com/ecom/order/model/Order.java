@@ -1,6 +1,7 @@
 package com.ecom.order.model;
 
 import java.sql.Timestamp;
+import java.sql.Date;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
@@ -36,24 +38,22 @@ public class Order {
 	@Column(name = "USER_ID")
 	private String userId;
 	
-	@Column(name = "CITY")
-	private String city;
-	
 	@Column(name = "DELIVERY_DATE")
-	private Timestamp deliveryDate;
+	private Date deliveryDate;
 	
 	@Column(name = "STATUS")
 	private String status;
 	
 	@OneToOne(mappedBy = "order")
 	private Shipment shipInfo;
+	
+	@PrePersist
+	protected void initOrderDate() {
+		this.orderDate = new Timestamp(System.currentTimeMillis());
+	}
 
 	public Timestamp getOrderDate() {
 		return orderDate;
-	}
-
-	public void setOrderDate(Timestamp orderDate) {
-		this.orderDate = orderDate;
 	}
 
 	public String getUserId() {
@@ -64,19 +64,11 @@ public class Order {
 		this.userId = userId;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public Timestamp getDeliveryDate() {
+	public Date getDeliveryDate() {
 		return deliveryDate;
 	}
 
-	public void setDeliveryDate(Timestamp deliveryDate) {
+	public void setDeliveryDate(Date deliveryDate) {
 		this.deliveryDate = deliveryDate;
 	}
 
