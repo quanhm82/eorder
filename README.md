@@ -13,7 +13,7 @@ Starting eOrder instance with "dev" profile
 ```sh
 $ cd target
 ...
-$ java -jar eorder-{version}.jar -Dspring.profile.active=dev
+$ java -jar eorder-{version}.jar --spring.profiles.active=dev
 ```
 Access eDiscovery by http://localhost:9999/swagger-ui.html
 
